@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "app_id": 1,
+    "item_id": "SEC-01",
+    "titulo": "Credenciais ou segredos hardcoded no código-fonte",
+    "descricao": "Chaves de API, segredos de sessão ou credenciais estão definidos diretamente no código. Evidência: SECRET_KEY definida diretamente em app.py.",
+    "severidade": "critica",
+    "prioridade": 1,
+    "status": "aberto",
+    "recomendacao": "Remover segredos hardcoded do repositório, rotacionar credenciais expostas e carregá-las via variáveis de ambiente."
+  },
+  {
+    "id": 2,
+    "app_id": 1,
+    "item_id": "HDR-01",
+    "titulo": "Ausência de cabeçalho Content-Security-Policy (CSP)",
+    "descricao": "A aplicação não define uma política CSP restritiva. Evidência: Header Content-Security-Policy ausente na resposta de GET /.",
+    "severidade": "media",
+    "prioridade": 2,
+    "status": "em_correcao",
+    "recomendacao": "Configurar o header Content-Security-Policy restringindo origens de scripts (default-src 'self'; script-src 'self')."
+  },
+  {
+    "id": 3,
+    "app_id": 1,
+    "item_id": "HDR-02",
+    "titulo": "Ausência de cabeçalho X-Frame-Options",
+    "descricao": "A aplicação pode ser embutida em iframes de terceiros (Clickjacking). Evidência: Header X-Frame-Options ausente na resposta de GET /.",
+    "severidade": "baixa",
+    "prioridade": 3,
+    "status": "corrigido",
+    "recomendacao": "Adicionar o cabeçalho X-Frame-Options: DENY ou SAMEORIGIN em todas as respostas."
+  }
+]

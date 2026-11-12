@@ -1,0 +1,34 @@
+[
+  {
+    "id": "AUTH-01",
+    "categoria": "Autenticação",
+    "pergunta": "As senhas dos usuários são armazenadas utilizando algoritmo de hashing forte (ex.: Argon2, bcrypt ou PBKDF2) com salt?",
+    "referencia": "OWASP A07:2021 / CWE-916",
+    "severidade_base": "alta",
+    "recomendacao": "Substituir hashes fracos (MD5/SHA1) ou texto puro por bcrypt ou Argon2id com parâmetros adequados de custo."
+  },
+  {
+    "id": "HDR-01",
+    "categoria": "Headers de Segurança",
+    "pergunta": "A aplicação envia o cabeçalho Content-Security-Policy (CSP) restritivo nas respostas HTTP?",
+    "referencia": "OWASP A05:2021 / CWE-693",
+    "severidade_base": "media",
+    "recomendacao": "Configurar o header Content-Security-Policy restringindo origens de scripts (default-src 'self'; script-src 'self')."
+  },
+  {
+    "id": "HDR-02",
+    "categoria": "Headers de Segurança",
+    "pergunta": "A aplicação envia o cabeçalho X-Frame-Options (DENY ou SAMEORIGIN) para mitigar Clickjacking?",
+    "referencia": "OWASP A05:2021 / CWE-1021",
+    "severidade_base": "baixa",
+    "recomendacao": "Adicionar o cabeçalho X-Frame-Options: DENY ou SAMEORIGIN em todas as respostas."
+  },
+  {
+    "id": "SEC-01",
+    "categoria": "Credenciais e Segredos",
+    "pergunta": "Chaves de API, segredos de sessão e credenciais de banco estão fora do código-fonte (carregados via variáveis de ambiente)?",
+    "referencia": "OWASP A02:2021 / CWE-798",
+    "severidade_base": "critica",
+    "recomendacao": "Remover segredos hardcoded do repositório, rotacionar credenciais expostas e carregá-las via variáveis de ambiente."
+  }
+]
