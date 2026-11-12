@@ -1,0 +1,30 @@
+[
+  {
+    "app_id": 1,
+    "item_id": "AUTH-01",
+    "resposta": "ok",
+    "origem": "manual",
+    "evidencia": "Verificado uso de bcrypt no módulo de autenticação."
+  },
+  {
+    "app_id": 1,
+    "item_id": "HDR-01",
+    "resposta": "falha",
+    "origem": "scanner",
+    "evidencia": "Header Content-Security-Policy ausente na resposta de GET /."
+  },
+  {
+    "app_id": 1,
+    "item_id": "HDR-02",
+    "resposta": "falha",
+    "origem": "scanner",
+    "evidencia": "Header X-Frame-Options ausente na resposta de GET /."
+  },
+  {
+    "app_id": 1,
+    "item_id": "SEC-01",
+    "resposta": "falha",
+    "origem": "manual",
+    "evidencia": "SECRET_KEY definida diretamente em app.py."
+  }
+]

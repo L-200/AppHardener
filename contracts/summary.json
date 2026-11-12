@@ -1,0 +1,37 @@
+{
+  "app_id": 1,
+  "percentual_atendido": 25.0,
+  "total_itens_avaliados": 4,
+  "total_achados": 3,
+  "por_severidade": {
+    "critica": 1,
+    "alta": 0,
+    "media": 1,
+    "baixa": 1
+  },
+  "por_status": {
+    "aberto": 1,
+    "em_correcao": 1,
+    "corrigido": 1
+  },
+  "por_categoria": {
+    "Autenticação": {
+      "ok": 1,
+      "falha": 0,
+      "nao_se_aplica": 0,
+      "nao_verificado": 0
+    },
+    "Headers de Segurança": {
+      "ok": 0,
+      "falha": 2,
+      "nao_se_aplica": 0,
+      "nao_verificado": 0
+    },
+    "Credenciais e Segredos": {
+      "ok": 0,
+      "falha": 1,
+      "nao_se_aplica": 0,
+      "nao_verificado": 0
+    }
+  }
+}
